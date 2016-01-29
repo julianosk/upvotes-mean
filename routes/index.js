@@ -1,5 +1,5 @@
-// var express = require('express');
-// var router = express.Router();
+var express = require('express');
+var router = express.Router();
 var mongoose = require('mongoose');
 var Post = mongoose.model('Post');
 var Comment = mongoose.model('Comment');
@@ -8,7 +8,7 @@ router.get('/posts', function (req, res, next) {
 	Post.find(function(err, posts){
 		if (err) { return next(err); }
 
-		res.json(posts)
+		res.json(posts);
 	});
 });
 
@@ -36,9 +36,17 @@ router.param('post', function (req, res, next, id) {
 
 router.get('/posts/:post', function (req, res) {
 	res.json(req.post);
-})
+});
 
-// module.exports = router;
+router.put('/posts/:post/upvote', function (req, res, next) {
+	req.post.upvote(function (err, post) {
+		if (err) { return next(err); }
+
+		res.json(post);
+	});
+});
+
+module.exports = router;
 
 /*var express = require('express');
 var router = express.Router();

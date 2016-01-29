@@ -17,9 +17,9 @@
 10 error You can get their info via:
 10 error     npm owner ls flapper-news
 10 error There is likely additional logging output above.
-11 error System Linux 4.2.0-25-generic
+11 error System Linux 4.2.0-23-generic
 12 error command "/usr/bin/nodejs" "/usr/bin/npm" "start"
-13 error cwd /home/juliano/Development/upvotes-mean
+13 error cwd /home/juliano/project/thinkster-mean-tutorial
 14 error node -v v0.10.25
 15 error npm -v 1.4.21
 16 error code ELIFECYCLE
